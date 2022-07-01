@@ -26,7 +26,7 @@ int main()      </br>
 }       </br>
 > - **Kết quả:**: Data: huyNgu nhu bo va vietdz vl va linhngu
 
-> # ***Chú ý quan trọng:***:
+> # ***Chú ý quan trọng:***
 > - **%[a-zA-Z ]**: Sẽ đọc tất cả kí tự từ a-z và A-Z và có kí tự space trong buffer buffer và lưu vào bufer nhỏ tương ứng.
 >   - Như trong VD: biến *huy* bằng *huyNgu nhu bo*.
 >   - Nếu sử dụng %s: thì chỉ lưu được huyNgu, đến khoảng trắng sẽ ko đọc nữa.
