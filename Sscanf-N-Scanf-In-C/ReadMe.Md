@@ -2,28 +2,28 @@
 
 > Hàm này sẽ đọc dữ liệu từ buffer, tách dữ liệu từ buffer đó và lưu vào trong các buffer con.
 
-> - Ta có VD **basic-sscan.c**;  
-> #include <stdio.h>
-int main()
-{
-        char huy[30] ={0}, viet[30] = {0};
-        char buffer[100] = "huyNgu va vietdz";
-        sscanf(buffer,"%s va %s", huy, viet);
-        printf("Data: %s va %s\n", huy, viet);
-        return 0;
-}
-> - **Kết quả:** Data: huyNgu va vietdz
+> - Ta có VD **basic-sscan.c**;  </br>
+> #include <stdio.h>                   </br>         
+int main()      </br>
+{               </br>
+        char huy[30] ={0}, viet[30] = {0};      </br>
+        char buffer[100] = "huyNgu va vietdz";  </br>
+        sscanf(buffer,"%s va %s", huy, viet);   </br>
+        printf("Data: %s va %s\n", huy, viet);  </br>
+        return 0;       </br>
+}       </br>
+> - **Kết quả:** Data: huyNgu va vietdz </br>
 
-> - Ta có VD ***advance-sscanf.c***;  
-> #include <stdio.h>
-int main()
+> - Ta có VD ***advance-sscanf.c***;    </br>
+> #include <stdio.h>    </br>
+int main()      </br>
 {
-        char huy[30] ={0}, viet[30] = {0}, linh[30] = {0};
-        char buffer[100] = "huyNgu nhu bo. va          vietdz vl, linhngu";
-        sscanf(buffer,"%[a-zA-Z ]. va  %[^,],%s", huy, viet, linh);
-        printf("Data: %s va %s va %s\n", huy, viet, linh);
-        return 0;
-}
+        char huy[30] ={0}, viet[30] = {0}, linh[30] = {0};      </br>
+        char buffer[100] = "huyNgu nhu bo. va          vietdz vl, linhngu";     </br>
+        sscanf(buffer,"%[a-zA-Z ]. va  %[^,],%s", huy, viet, linh);     </br>
+        printf("Data: %s va %s va %s\n", huy, viet, linh);      </br>
+        return 0;       </br>
+}       </br>
 > - **Kết quả:**: Data: huyNgu nhu bo va vietdz vl va linhngu
 
 > # ***Chú ý quan trọng:***:
@@ -39,17 +39,17 @@ int main()
 
 > Ngoài cách thông thường như scanf("%d", abc); thì ta có 1 cách nâng cao hơn.
 
-> - Ta có VD ***advance-sscanf.c***; 
-> #include <stdio.h>
-int main()
+> - Ta có VD ***advance-sscanf.c***;    </br>
+> #include <stdio.h>    </br>
+int main()      </br>
 {
-        char huy[30] ={0}, viet[30] = {0};
-        char buffer[100] = "huyNgu va vietdz";
-        printf("Enter Data to parse: ");
-        scanf("%s %s", huy, viet);
-        printf("Data: %s va %s\n", huy, viet);
-        return 0;
-}
+        char huy[30] ={0}, viet[30] = {0};      </br>
+        char buffer[100] = "huyNgu va vietdz";  </br>
+        printf("Enter Data to parse: ");        </br>
+        scanf("%s %s", huy, viet);      </br>
+        printf("Data: %s va %s\n", huy, viet);  </br>
+        return 0;       </br>
+}       </br>
 >
 > **Kết quả:** Enter Data to parse: vietdz huyngu
 > Data: vietdz va huyngu
